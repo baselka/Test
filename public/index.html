@@ -28,6 +28,13 @@
      * Function called when clicking the Login/Logout button.
      */
     // [START buttoncallback]
+    function about(){
+    	alert("Sorry not available for prototype !!");
+    }
+    function contact(){
+
+    	alert("Sorry not available for prototype !!");
+    }
     function facebookSignIn() {
       if (!firebase.auth().currentUser) {
         // [START createprovider]
@@ -100,7 +107,10 @@
         // [END_EXCLUDE]
       });
       // [END authstatelistener]
+
       document.getElementById('fbsign-in').addEventListener('click', facebookSignIn, false);
+      document.getElementById('About').addEventListener('click', about, false);
+      document.getElementById('contact').addEventListener('click', contact, false);
     }
     window.onload = function() {
       initApp();
@@ -159,9 +169,9 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         
-        <li><a href="#">About</a></li>
+        <li><a id="About" href="#" >About</a></li>
         
-        <li><a href="#">Contact</a></li>
+        <li><a id="contact" href="#">Contact</a></li>
       </ul>
      
     </div>
@@ -194,15 +204,18 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 4000); // Change image every 2 seconds
+    setTimeout(carousel, 6000); // Change image every 6 \seconds
 }
 </script>
 
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      
+      <p>Wash'O provides the service of washing and dry cleaning which includes garments that require special care such as your clothes and heavy garments such as mattress,blankets,bed sheets,curtains and other more.The business will also provide professional washing as well as professional finish press.
+ Because most of the laundry shops in Baguio City do not provide finish press.Wash O intends to provide this service that makes our business unique from other laundry businesses.
+This business also has its own website and an online application where customer can contact us through the application.
+.</p>
       <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
+      <h3>Mission</h3>
+      <p>Wash'O company’s mission is to provide convenience and develop highly succesful laundry shop in the Philippines that will not only meet the clients needs but also supersede their expectations.</p>
     </div>
     <div class="col-sm-4 sidenav" style="background-color: #007f61; height:700px;">
       <div class="well" style="background-color:  #007f61;">
